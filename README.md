@@ -1,2 +1,3 @@
-# Interview-Hacker
-A collection of libraries to help solve coding interview problems
+# leetcode-python-solutions
+
+Solutions to some leetcode problems using python.
