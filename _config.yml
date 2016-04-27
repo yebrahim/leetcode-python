@@ -11,7 +11,7 @@ email: yasser{dot}ebrahim at geemail dot com
 description: > # this means to ignore newlines until "baseurl:"
   This blog documents my road to learn Python by solving programming problems
   on leetcode.com. I will be adding a post for each problem worthy of discussion.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/leetcode-python-solutions" # the subpath of your site, e.g. /blog
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 github_username:  yebrahim
 
