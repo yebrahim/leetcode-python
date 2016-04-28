@@ -6,12 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Learning Python with the Leetcode Problemset</title>
-  <meta name="description" content="This blog documents my road to learn Python by solving programming problems on leetcode.com. I will be adding a post for each problem worthy of discussion.
-">
+  <title>p344 - Reverse String</title>
+  <meta name="description" content="ProblemReverse a string.">
 
   <link rel="stylesheet" href="/leetcode-python-solutions/css/main.css">
-  <link rel="canonical" href="http://yebrahim.github.io/leetcode-python-solutions/">
+  <link rel="canonical" href="http://yebrahim.github.io/leetcode-python-solutions/easy/2016/04/28/p344-reverse-string.html">
   <link rel="alternate" type="application/rss+xml" title="Learning Python with the Leetcode Problemset" href="http://yebrahim.github.io/leetcode-python-solutions/feed.xml">
 </head>
 
@@ -51,18 +50,35 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div id="posts">
-  <h2>Blog Posts</h2>
-  <ul>
-    
-      <li><a href="/leetcode-python-solutions/easy/2016/04/28/p344-reverse-string.html">p344 - Reverse String</a> - <span>[easy]</span></li>
-    
-      <li><a href="/leetcode-python-solutions/medium/2016/04/26/p122-best-time-to-buy-stock-ii.html">p122 - Best Time to Buy and Sell Stock II</a> - <span>[medium]</span></li>
-    
-      <li><a href="/leetcode-python-solutions/easy/2016/04/25/p20-valid-parentheses.html">p20 - Valid Parentheses</a> - <span>[easy]</span></li>
-    
-  </ul>
-</div>
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">p344 - Reverse String</h1>
+    <p class="post-meta"><time datetime="2016-04-28T00:00:00-07:00" itemprop="datePublished">Apr 28, 2016</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <h1 id="problem">Problem</h1>
+<p>Reverse a string.</p>
+
+<p><a href="https://leetcode.com/problems/reverse-string/">Read original problem statement on leetcode</a></p>
+
+<h1 id="discussion">Discussion</h1>
+<p>This is a typical one-liner kind of problem where you’d think “Thank God I know python!”</p>
+
+<h1 id="solution">Solution</h1>
+<p>Python has a built-in string splice function, where you can specify start and end indices, as well as a step. If the start and end are not specified, <code class="highlighter-rouge">0</code> and <code class="highlighter-rouge">len(string)</code> are used, and if the step is negative, the splice is taken backwards, which is essentially reversing the string.</p>
+
+<h1 id="code">Code</h1>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Solution</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">reverseString</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">s</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span></code></pre></figure>
+
+
+  </div>
+
+</article>
 
       </div>
     </div>
