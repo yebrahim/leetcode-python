@@ -10,7 +10,7 @@
   <meta name="description" content="ProblemGiven a string of only three types of parantheses (and their closing counterparts) '[', '(', '{', ']', ')', '}' we’re required to return true if and o...">
 
   <link rel="stylesheet" href="/leetcode-python-solutions/css/main.css">
-  <link rel="canonical" href="http://yebrahim.github.io/leetcode-python-solutions/easy/2016/04/26/p20-valid-parentheses.html">
+  <link rel="canonical" href="http://yebrahim.github.io/leetcode-python-solutions/easy/2016/04/02/p20-valid-parentheses.html">
   <link rel="alternate" type="application/rss+xml" title="Learning Python with the Leetcode Problemset" href="http://yebrahim.github.io/leetcode-python-solutions/feed.xml">
 </head>
 
@@ -54,12 +54,14 @@
 
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">p20 - Valid Parentheses</h1>
-    <p class="post-meta"><time datetime="2016-04-26T19:24:13-07:00" itemprop="datePublished">Apr 26, 2016</time></p>
+    <p class="post-meta"><time datetime="2016-04-02T19:24:13-07:00" itemprop="datePublished">Apr 2, 2016</time></p>
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <h1 id="problemproblem"><a href="https://leetcode.com/problems/valid-parentheses/">Problem</a></h1>
+    <h1 id="problem">Problem</h1>
 <p>Given a string of only three types of parantheses (and their closing counterparts) <code class="highlighter-rouge">'[', '(', '{', ']', ')', '}'</code> we’re required to return true if and only if they are properly closed. For example <code class="highlighter-rouge">"([])"</code> is valid, whereas <code class="highlighter-rouge">"({(}))"</code> is not.</p>
+
+<p><a href="https://leetcode.com/problems/valid-parentheses/">Read original problem statement on leetcode</a></p>
 
 <h1 id="discussion">Discussion</h1>
 <p>A stack should immediately come to mind when solving this problem. The reason is we can open parentheses in any order, but the real check comes when we see closing parentheses. Whenever we see a closed parenthesis, it should have immediately followed an open parenthesis of the same type, all the characters that are allowed in the input are parentheses. A stack helps keep track of the most recently encountered items, so all we need to do is all open parantheses on the stack until we meet a closed parenthesis, in which case it should match the item on the top of the stack, we pop it if that’s the case and continue matching. You can easily see this is a linear <code class="highlighter-rouge">O(n)</code> solution in both time and space.</p>
@@ -69,7 +71,6 @@
 <p>This solution is evidently more time-consuming <code class="highlighter-rouge">O(n^2)</code>, although it can be written surprisingly briefly in Python. But because we’re concerned with performance too, we’ll ignore this solution.</p>
 
 <h1 id="solution">Solution</h1>
-
 <p>I’m doing something extra here, which is trimming the string down to parentheses only, in case we had any other characters. We do this using the python regex module <code class="highlighter-rouge">(re)</code> which can replace a substring based on a regex. Next, we create a dictionary that maps closing parentheses to their open counterparts. We do the mapping this way because closing parentheses are kind of the ‘trigger’ for our matching algorithm. After that, we loop over all characters, and since using <code class="highlighter-rouge">in</code> on the the dicionary checks against its keys, we can push all non-key characters (which are open parentheses) to the stack, and pop otherwise after testing the match.</p>
 
 <h1 id="code">Code</h1>
@@ -105,7 +106,7 @@
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
           <li>Learning Python with the Leetcode Problemset</li>
-          <li><a href="mailto:yasser{dot}ebrahim at geemail dot com">yasser{dot}ebrahim at geemail dot com</a></li>
+          <li><a href="mailto:"></a></li>
         </ul>
       </div>
 
