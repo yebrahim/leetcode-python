@@ -1,4 +1,4 @@
-# leetcode-python-solutions
+# Leetcode Solutions in Python
 
 [![Binder](http://mybinder.org/badge.svg)](http://mybinder.org/repo/yebrahim/leetcode-python-solutions)
 
