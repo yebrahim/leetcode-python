@@ -1,13 +1,8 @@
 class Solution(object):
     def isValid(self, s):
-        s = re.sub(r'[^\{\(\[\]\)\}}]', '', s);
-        braces = {'}': '{', ')': '(', ']': '['};
-        myStack = [];
+        braces = {'}': '{', ')': '(', ']': '['}
+        stack = []
         for i in s:
-            if i in braces:
-                if not len(myStack) or braces[i] != myStack.pop():
-                    return False;
-            else:
-                myStack.append(i);
-        return not len(myStack);
-        
+            if i not in braces: stack.append(i)
+            elif not len(stack) or braces[i] != stack.pop(): return False
+        return not len(stack)
